@@ -63,8 +63,8 @@
             pcbAlumnos.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbAlumnos.TabIndex = 1;
             pcbAlumnos.TabStop = false;
-            pcbAlumnos.MouseDown += pcbAlumnos_MouseDown;
-            pcbAlumnos.MouseUp += pcbAlumnos_MouseUp;
+            pcbAlumnos.MouseDown += pcbGenerar_MouseDown;
+            pcbAlumnos.MouseUp += pcbGenerar_MouseUp;
             // 
             // pcbDocentes
             // 
@@ -75,8 +75,8 @@
             pcbDocentes.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbDocentes.TabIndex = 2;
             pcbDocentes.TabStop = false;
-            pcbDocentes.MouseDown += pcbDocentes_MouseDown;
-            pcbDocentes.MouseUp += pcbDocentes_MouseUp;
+            pcbDocentes.MouseDown += pcbGenerar_MouseDown;
+            pcbDocentes.MouseUp += pcbGenerar_MouseUp;
             // 
             // pcbCarreras
             // 
@@ -87,8 +87,8 @@
             pcbCarreras.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbCarreras.TabIndex = 3;
             pcbCarreras.TabStop = false;
-            pcbCarreras.MouseDown += pcbCarreras_MouseDown;
-            pcbCarreras.MouseUp += pcbCarreras_MouseUp;
+            pcbCarreras.MouseDown += pcbGenerar_MouseDown;
+            pcbCarreras.MouseUp += pcbGenerar_MouseUp;
             // 
             // pcbUsuarios
             // 
@@ -99,13 +99,13 @@
             pcbUsuarios.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbUsuarios.TabIndex = 4;
             pcbUsuarios.TabStop = false;
-            pcbUsuarios.MouseDown += pcbUsuarios_MouseDown;
-            pcbUsuarios.MouseUp += pcbUsuarios_MouseUp;
+            pcbUsuarios.MouseDown += pcbGenerar_MouseDown;
+            pcbUsuarios.MouseUp += pcbGenerar_MouseUp;
             // 
             // pcbTitulo
             // 
             pcbTitulo.Image = Properties.Resources.Sistema;
-            pcbTitulo.Location = new Point(395, 49);
+            pcbTitulo.Location = new Point(393, 76);
             pcbTitulo.Name = "pcbTitulo";
             pcbTitulo.Size = new Size(1236, 173);
             pcbTitulo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -135,6 +135,7 @@
             Name = "frmPrincipal";
             Text = "frmPrincipal";
             WindowState = FormWindowState.Maximized;
+            Load += frmPrincipal_Load;
             ((System.ComponentModel.ISupportInitialize)pcbMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbAlumnos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbDocentes).EndInit();
