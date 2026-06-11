@@ -48,6 +48,7 @@
             btnAcceder.TabIndex = 0;
             btnAcceder.Text = "ACCEDER";
             btnAcceder.UseVisualStyleBackColor = true;
+            btnAcceder.Click += btnAcceder_Click;
             // 
             // btnSalir
             // 

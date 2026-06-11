@@ -11,5 +11,10 @@ namespace pry_LOGINNN
         {
             Application.Exit();
         }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
