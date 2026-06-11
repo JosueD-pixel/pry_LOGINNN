@@ -42,10 +42,9 @@
             // btnAcceder
             // 
             btnAcceder.Font = new Font("Segoe UI", 14F);
-            btnAcceder.Location = new Point(288, 299);
-            btnAcceder.Margin = new Padding(4, 4, 4, 4);
+            btnAcceder.Location = new Point(230, 239);
             btnAcceder.Name = "btnAcceder";
-            btnAcceder.Size = new Size(232, 79);
+            btnAcceder.Size = new Size(186, 63);
             btnAcceder.TabIndex = 0;
             btnAcceder.Text = "ACCEDER";
             btnAcceder.UseVisualStyleBackColor = true;
@@ -54,10 +53,9 @@
             // btnSalir
             // 
             btnSalir.Font = new Font("Segoe UI", 14F);
-            btnSalir.Location = new Point(528, 299);
-            btnSalir.Margin = new Padding(4, 4, 4, 4);
+            btnSalir.Location = new Point(422, 239);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(232, 79);
+            btnSalir.Size = new Size(186, 63);
             btnSalir.TabIndex = 1;
             btnSalir.Text = "SALIR";
             btnSalir.UseVisualStyleBackColor = true;
@@ -66,30 +64,27 @@
             // txtUsuario
             // 
             txtUsuario.Font = new Font("Segoe UI", 14F);
-            txtUsuario.Location = new Point(288, 129);
-            txtUsuario.Margin = new Padding(4, 4, 4, 4);
+            txtUsuario.Location = new Point(230, 103);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre de usuario";
-            txtUsuario.Size = new Size(472, 45);
+            txtUsuario.Size = new Size(378, 39);
             txtUsuario.TabIndex = 2;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 14F);
-            txtPassword.Location = new Point(288, 194);
-            txtPassword.Margin = new Padding(4, 4, 4, 4);
+            txtPassword.Location = new Point(230, 155);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña de usuario";
-            txtPassword.Size = new Size(472, 45);
+            txtPassword.Size = new Size(378, 39);
             txtPassword.TabIndex = 3;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(15, 41);
-            pictureBox1.Margin = new Padding(4, 4, 4, 4);
+            pictureBox1.Location = new Point(12, 33);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 220);
+            pictureBox1.Size = new Size(189, 176);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -97,26 +92,24 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(824, 15);
-            pictureBox2.Margin = new Padding(4, 4, 4, 4);
+            pictureBox2.Location = new Point(659, 12);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(118, 118);
+            pictureBox2.Size = new Size(94, 94);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(956, 445);
+            ClientSize = new Size(765, 356);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(txtPassword);
             Controls.Add(txtUsuario);
             Controls.Add(btnSalir);
             Controls.Add(btnAcceder);
-            Margin = new Padding(4, 4, 4, 4);
             Name = "frmLogin";
             Text = "Inicio de sesion";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

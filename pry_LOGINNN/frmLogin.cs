@@ -9,7 +9,7 @@ namespace pry_LOGINNN
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
