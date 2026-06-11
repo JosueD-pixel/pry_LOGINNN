@@ -27,13 +27,13 @@ namespace pry_LOGINNN
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
                         consulta.Parameters.AddWithValue("@usuario", usuario);
-                        consulta.Parameters.AddWithValue("password", password);
+                        consulta.Parameters.AddWithValue("@password", password);
 
                         using (var resultado = consulta.ExecuteReader())
                         {
                             if (resultado.Read())
                             {
-                                perfil = resultado.GetString("vchrol");
+                                perfil = resultado.GetString("perfil");
                                 MessageBox.Show("Tu perfil es: " + perfil, "Sistema");
                                 return true;
                             }
