@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MYSQLConnector" Version="2.6.0" />
+    <PackageReference Include="MySQLconnector" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
