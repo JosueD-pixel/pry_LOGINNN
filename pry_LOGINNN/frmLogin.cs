@@ -9,7 +9,7 @@ namespace pry_LOGINNN
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
@@ -30,8 +30,8 @@ namespace pry_LOGINNN
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error de autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPassword.Text = " ";
-                txtUsuario.Text = " "; 
+                txtPassword.Text = "";
+                txtUsuario.Text = ""; 
             }
         }
     }
