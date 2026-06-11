@@ -12,7 +12,7 @@ namespace pry_LOGINNN
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
             try
             {
