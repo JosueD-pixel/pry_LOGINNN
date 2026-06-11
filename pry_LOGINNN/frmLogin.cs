@@ -30,6 +30,8 @@ namespace pry_LOGINNN
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error de autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Text = " ";
+                txtUsuario.Text = " "; 
             }
         }
     }
