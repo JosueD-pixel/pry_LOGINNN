@@ -61,6 +61,11 @@ namespace pry_LOGINNN
                             if (resultado.Read())
                             {
                                 perfil = resultado.GetString("perfil");
+                                AsignarPermisos();
+                                if(!esAdministrador && !esDocente)
+                                {
+                                    throw new Exception($"El perfil{perfil} no tiene permisos para acceder");
+                                }
                                 MessageBox.Show("Tu perfil es: " + perfil, "Sistema");
                                 return true;
                             }
