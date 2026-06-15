@@ -21,7 +21,7 @@ namespace pry_LOGINNN
 
         //propiedad estatica
          public static bool EsAdministrador { get => esAdministrador; }
-          public static bool EsDocente { get => esDocente; }
+         public static bool EsDocente { get => esDocente; }
 
         public void AsignarPermisos()
         {
@@ -64,7 +64,7 @@ namespace pry_LOGINNN
                                 AsignarPermisos();
                                 if(!esAdministrador && !esDocente)
                                 {
-                                    throw new Exception($"El perfil{perfil} no tiene permisos para acceder");
+                                    throw new Exception($"El perfil {perfil} no tiene permisos para acceder");
                                 }
                                 MessageBox.Show("Tu perfil es: " + perfil, "Sistema");
                                 return true;
