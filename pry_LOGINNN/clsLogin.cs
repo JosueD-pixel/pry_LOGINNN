@@ -15,6 +15,33 @@ namespace pry_LOGINNN
 
         public static string perfil;
 
+        //atributo estatico
+        private static bool esAdministrador;
+        private static bool esDocente; 
+
+        //propiedad estatica
+         public static bool EsAdministrador { get => esAdministrador; }
+          public static bool EsDocente { get => esDocente; }
+
+        public void AsignarPermisos()
+        {
+            switch (perfil)
+            {
+                case "Administrador":
+                    esAdministrador = true;
+                    esDocente = false;
+                    break;
+                case "Docente":
+                    esAdministrador = false;
+                    esDocente = true;
+                    break;
+                default:
+                    esAdministrador = false;
+                    esDocente = false;
+                    break;
+            }
+        }
+
         public bool ValidarAcceso()
         {
             try
