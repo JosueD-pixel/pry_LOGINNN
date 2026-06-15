@@ -40,6 +40,9 @@ namespace pry_LOGINNN
             pcbCarreras.BackColor = Color.Transparent;
             pcbUsuarios.BackColor = Color.Transparent;
 
+            pcbCarreras.Enabled = clsLogin.EsAdministrador;
+            pcbDocentes.Enabled = clsLogin.EsAdministrador;
+
         }
     }
 }
