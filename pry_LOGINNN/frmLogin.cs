@@ -31,7 +31,7 @@ namespace pry_LOGINNN
             {
                 MessageBox.Show(ex.Message, "Error de autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Text = "";
-                txtUsuario.Text = ""; 
+                txtUsuario.Text = "";
             }
         }
     }
