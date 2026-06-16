@@ -9,9 +9,9 @@ namespace pry_LOGINNN
     internal class cls_conexion
     {
         private string host = "189.240.192.140";
-        private string bd = "bdescuela3d";
-        private string usuario = "terceroD";
-        private string password = "tercero@D";
+        private string bd = "bdescuelagdequipo2";
+        private string usuario = "gdEquipo2";
+        private string password = "grupo2";
         private string puerto = "3306";
 
         private string cadenaConexion => $"server= {host};database={bd};user={usuario};password={password};port={puerto}";
