@@ -49,8 +49,8 @@ namespace pry_LOGINNN
                 cls_conexion conexionBD = new cls_conexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT perfil FROM tblUsuarios " +
-                                 "WHERE nombreUsuario = @usuario AND password = @password;";
+                    string sql = "SELECT vchperfil FROM tblUsuarios " +
+                                 "WHERE vchnombreUsuario = @usuario AND vchpassword = MD5(@password);";
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
                         consulta.Parameters.AddWithValue("@usuario", usuario);
@@ -60,7 +60,7 @@ namespace pry_LOGINNN
                         {
                             if (resultado.Read())
                             {
-                                perfil = resultado.GetString("perfil");
+                                perfil = resultado.GetString("vchperfil");
                                 AsignarPermisos();
                                 if(!esAdministrador && !esDocente)
                                 {
