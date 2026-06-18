@@ -18,7 +18,13 @@ namespace pry_LOGINNN
             misformasabiertos = formulario;
             panel.Controls.Clear();
 
-            //VAS NATHAN 
+            formulario.TopLevel=false;
+            formulario.FormBorderStyle = FormBorderStyle.Sizable;
+            formulario.Dock= DockStyle.Fill;
+
+            panel.Controls.Add(formulario);
+            panel.Tag = formulario;
+            formulario.Show();
         }
     
     }
