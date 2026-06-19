@@ -10,6 +10,7 @@ namespace pry_LOGINNN
 {
     public partial class frmPrincipal : Form
     {
+        ClsPrincipal principal;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -46,6 +47,13 @@ namespace pry_LOGINNN
 
             pcbAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsDocente;
 
+        }
+
+
+        private void pnlContenedor_Click(object sender, EventArgs e)
+        {
+            principal = new ClsPrincipal();
+            principal.AgregarAlcontenedor(new frmCarrera(), pnlContenedor);
         }
     }
 }
