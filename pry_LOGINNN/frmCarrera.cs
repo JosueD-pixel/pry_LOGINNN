@@ -10,7 +10,7 @@ namespace pry_LOGINNN
 {
     public partial class frmCarrera : Form
     {
-        ClsCarreras carreras; 
+        ClsCarreras carreras;
         public frmCarrera()
         {
             InitializeComponent();
@@ -28,7 +28,22 @@ namespace pry_LOGINNN
             }
         }
 
+        private void txtNombreCarrera_TextChanged(object sender, EventArgs e)
+        {
+            carreras = new ClsCarreras();
+            dgvCarreras.DataSource = null;
+            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                carreras.NombreCarrera = txtNombreCarrera.Text;
+                dgvCarreras.DataSource = carreras.Consultar;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
+        }
     }
 
 }
