@@ -42,5 +42,32 @@ namespace pry_LOGINNN
 
 
         }
+
+        public DataTable Consultar()
+        {
+            tabla = new DataTable();
+            try
+            {
+                cls_conexion conexionBD = new cls_conexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT idCarrera AS Clave, nombreCarrera AS Carrera, descripcion AS Descripcion FROM tblCarreras WHERE nombreCarrera LIKE @carrera;";
+                    using (var consultar = new MySqlCommand(sql, conexion))
+                    {
+                        consultar.Parameters.AddWithValue("@carrera", "%" + nombreCarrera + "%");
+                        using (consulta = new MySqlDataAdapter(consultar))
+                        {
+                            consulta.Fill(tabla);
+                        }//Liberar el adaptador
+                    }//Liberar la consulta
+                }//Liberar la conexion
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en la conexion de la base de datos " + ex.Message);
+            }
+            return tabla;
+        }
+
     }
 }
