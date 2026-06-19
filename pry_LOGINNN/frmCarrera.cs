@@ -14,11 +14,21 @@ namespace pry_LOGINNN
         public frmCarrera()
         {
             InitializeComponent();
-            carreras = new ClsCarreras();
-            dgvCarreras.DataSource = carreras;
-            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvCarreras.DataSource = carreras.CargarDataGrid;
 
+            carreras = new ClsCarreras();
+            dgvCarreras.DataSource = null;
+            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                dgvCarreras.DataSource = carreras.CargarDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+
     }
+
 }
