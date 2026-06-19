@@ -10,15 +10,21 @@ namespace pry_LOGINNN
 
         public void AgregarAlcontenedor(Form formulario, Panel panel)
         {
-            if(misformasabiertos != null)
+            if (misformasabiertos != null)
             {
                 misformasabiertos.Close();
-                misformasabiertos.Dispose(); 
+                misformasabiertos.Dispose();
             }
             misformasabiertos = formulario;
             panel.Controls.Clear();
 
-            //VAS NATHAN 
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.Sizable;
+            formulario.Dock = DockStyle.Fill;
+            
+            panel.Controls.Add(formulario);
+            panel.Tag = formulario;
+            formulario.Show();
         }
     
     }

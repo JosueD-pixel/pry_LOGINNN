@@ -49,11 +49,10 @@ namespace pry_LOGINNN
 
         }
 
-
-        private void pnlContenedor_Click(object sender, EventArgs e)
+        private void pcbCarreras_Click(object sender, EventArgs e)
         {
-            principal = new ClsPrincipal();
-            principal.AgregarAlcontenedor(new frmCarrera(), pnlContenedor);
-        }
+           principal = new ClsPrincipal();
+           principal.AgregarAlcontenedor(new frmCarrera(),pnlContenedor);
+        }   
     }
 }
