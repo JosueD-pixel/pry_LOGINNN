@@ -151,6 +151,7 @@
             txtNombreCarrera.PlaceholderText = "Buscar carrera";
             txtNombreCarrera.Size = new Size(169, 38);
             txtNombreCarrera.TabIndex = 4;
+            txtNombreCarrera.TextChanged += txtNombreCarrera_TextChanged;
             // 
             // frmCarrera
             // 
