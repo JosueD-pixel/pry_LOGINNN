@@ -36,7 +36,7 @@ namespace pry_LOGINNN
             try
             {
                 carreras.NombreCarrera = txtNombreCarrera.Text;
-                dgvCarreras.DataSource = carreras.Consultar;
+                dgvCarreras.DataSource = carreras.Consultar();
             }
             catch (Exception ex)
             {
