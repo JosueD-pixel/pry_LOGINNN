@@ -14,15 +14,5 @@ namespace pry_LOGINNN
         {
             InitializeComponent();
         }
-
-        private void frmCarrera_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

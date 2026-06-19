@@ -57,7 +57,7 @@
             // pcbAlumnos
             // 
             pcbAlumnos.Image = Properties.Resources.alumnosBoton;
-            pcbAlumnos.Location = new Point(58, 194);
+            pcbAlumnos.Location = new Point(58, 167);
             pcbAlumnos.Name = "pcbAlumnos";
             pcbAlumnos.Size = new Size(243, 126);
             pcbAlumnos.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -69,7 +69,7 @@
             // pcbDocentes
             // 
             pcbDocentes.Image = Properties.Resources.DocentesBoton;
-            pcbDocentes.Location = new Point(58, 350);
+            pcbDocentes.Location = new Point(58, 310);
             pcbDocentes.Name = "pcbDocentes";
             pcbDocentes.Size = new Size(243, 126);
             pcbDocentes.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -81,7 +81,7 @@
             // pcbCarreras
             // 
             pcbCarreras.Image = (Image)resources.GetObject("pcbCarreras.Image");
-            pcbCarreras.Location = new Point(58, 500);
+            pcbCarreras.Location = new Point(58, 456);
             pcbCarreras.Name = "pcbCarreras";
             pcbCarreras.Size = new Size(243, 126);
             pcbCarreras.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -94,7 +94,7 @@
             // pcbUsuarios
             // 
             pcbUsuarios.Image = Properties.Resources.UsuarioosBoton;
-            pcbUsuarios.Location = new Point(58, 651);
+            pcbUsuarios.Location = new Point(58, 601);
             pcbUsuarios.Name = "pcbUsuarios";
             pcbUsuarios.Size = new Size(243, 126);
             pcbUsuarios.SizeMode = PictureBoxSizeMode.StretchImage;
