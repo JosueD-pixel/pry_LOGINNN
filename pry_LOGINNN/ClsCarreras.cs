@@ -10,8 +10,12 @@ namespace pry_LOGINNN
     internal class ClsCarreras
     {
         private string nombreCarrera;
+        private string descripcion;
+        private int idCarrera;//este atributo es para referencia de update y delete 
         //Usamos un adaptador 
         private MySqlDataAdapter consulta;
+        //usamos un command para actualizar o insertar 
+        private MySqlCommand comando; 
         //usamos una tabla temporal
         private DataTable tabla;
 

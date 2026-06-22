@@ -11,7 +11,7 @@ namespace pry_LOGINNN
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            /**
+            
             using (frmLogin login = new frmLogin())
             {
                 if (login.ShowDialog() == DialogResult.OK)
@@ -19,8 +19,8 @@ namespace pry_LOGINNN
                     Application.Run(new frmPrincipal());
                 }
             }
-            */
-            Application.Run(new frmCarrera());
+            
+           // Application.Run(new frmCarrera());
             
         }
     }
