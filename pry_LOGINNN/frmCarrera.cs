@@ -15,8 +15,10 @@ namespace pry_LOGINNN
         public frmCarrera()
         {
             InitializeComponent();
-
-
+            CargarGrid();
+        }
+        public void CargarGrid()
+        {
             carreras = new ClsCarreras();
             dgvCarreras.DataSource = null;
             dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -95,6 +97,26 @@ namespace pry_LOGINNN
             txtNombre.Clear();
             txtDescripcion.Clear();
             txtNombre.Focus();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                carreras.IdCarrera = idCarrera;
+                var resp = MessageBox.Show("Confirmar que desea eliminar el dato seleccionado", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (resp == DialogResult.Yes)
+                {
+                    string msg = carreras.Eliminar();
+                    MessageBox.Show(msg);
+                    CargarGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }
