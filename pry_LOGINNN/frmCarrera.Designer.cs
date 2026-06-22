@@ -50,10 +50,9 @@
             // pcbLogo
             // 
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(652, 34);
-            pcbLogo.Margin = new Padding(3, 4, 3, 4);
+            pcbLogo.Location = new Point(570, 26);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(130, 114);
+            pcbLogo.Size = new Size(114, 86);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 1;
             pcbLogo.TabStop = false;
@@ -62,9 +61,9 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(449, 62);
+            lblTitulo.Location = new Point(393, 46);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(197, 60);
+            lblTitulo.Size = new Size(156, 47);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Carreras";
             // 
@@ -75,31 +74,29 @@
             pmlAgrupaControles.Controls.Add(btnNuevo);
             pmlAgrupaControles.Controls.Add(txtDescripcion);
             pmlAgrupaControles.Controls.Add(txtNombre);
-            pmlAgrupaControles.Location = new Point(231, 156);
-            pmlAgrupaControles.Margin = new Padding(3, 4, 3, 4);
+            pmlAgrupaControles.Location = new Point(202, 117);
             pmlAgrupaControles.Name = "pmlAgrupaControles";
-            pmlAgrupaControles.Size = new Size(778, 207);
+            pmlAgrupaControles.Size = new Size(681, 155);
             pmlAgrupaControles.TabIndex = 2;
             // 
             // btnEliminar
             // 
             btnEliminar.BackgroundImage = Properties.Resources.Captura_de_pantalla_2026_06_17_183955;
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(532, 112);
-            btnEliminar.Margin = new Padding(3, 4, 3, 4);
+            btnEliminar.Location = new Point(466, 84);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(120, 79);
+            btnEliminar.Size = new Size(105, 59);
             btnEliminar.TabIndex = 4;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
             btnGuardar.BackgroundImage = Properties.Resources.Captura_de_pantalla_2026_06_17_184226;
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(322, 112);
-            btnGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnGuardar.Location = new Point(282, 84);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(120, 79);
+            btnGuardar.Size = new Size(105, 59);
             btnGuardar.TabIndex = 3;
             btnGuardar.UseVisualStyleBackColor = true;
             // 
@@ -107,31 +104,28 @@
             // 
             btnNuevo.BackgroundImage = Properties.Resources.Captura_de_pantalla_2026_06_17_1831001;
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Location = new Point(136, 104);
-            btnNuevo.Margin = new Padding(3, 4, 3, 4);
+            btnNuevo.Location = new Point(119, 78);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(125, 87);
+            btnNuevo.Size = new Size(109, 65);
             btnNuevo.TabIndex = 2;
             btnNuevo.UseVisualStyleBackColor = true;
             // 
             // txtDescripcion
             // 
             txtDescripcion.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDescripcion.Location = new Point(136, 58);
-            txtDescripcion.Margin = new Padding(3, 4, 3, 4);
+            txtDescripcion.Location = new Point(119, 44);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Escribir una descripcion de la carrera";
-            txtDescripcion.Size = new Size(516, 38);
+            txtDescripcion.Size = new Size(452, 32);
             txtDescripcion.TabIndex = 1;
             // 
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(136, 4);
-            txtNombre.Margin = new Padding(3, 4, 3, 4);
+            txtNombre.Location = new Point(119, 3);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Escribir el nombre de la carrera";
-            txtNombre.Size = new Size(516, 38);
+            txtNombre.Size = new Size(452, 32);
             txtNombre.TabIndex = 0;
             // 
             // dgvCarreras
@@ -155,39 +149,37 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvCarreras.DefaultCellStyle = dataGridViewCellStyle2;
             dgvCarreras.EnableHeadersVisualStyles = false;
-            dgvCarreras.Location = new Point(168, 417);
-            dgvCarreras.Margin = new Padding(3, 4, 3, 4);
+            dgvCarreras.Location = new Point(147, 313);
             dgvCarreras.Name = "dgvCarreras";
             dgvCarreras.RowHeadersWidth = 51;
             dgvCarreras.RowTemplate.Height = 35;
-            dgvCarreras.Size = new Size(897, 208);
+            dgvCarreras.Size = new Size(785, 156);
             dgvCarreras.TabIndex = 3;
+            dgvCarreras.SelectionChanged += dgvCarreras_SelectionChanged;
             // 
             // txtNombreCarrera
             // 
             txtNombreCarrera.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreCarrera.Location = new Point(896, 371);
-            txtNombreCarrera.Margin = new Padding(3, 4, 3, 4);
+            txtNombreCarrera.Location = new Point(784, 278);
             txtNombreCarrera.Name = "txtNombreCarrera";
             txtNombreCarrera.PlaceholderText = "Buscar carrera";
-            txtNombreCarrera.Size = new Size(169, 38);
+            txtNombreCarrera.Size = new Size(148, 32);
             txtNombreCarrera.TabIndex = 4;
             txtNombreCarrera.TextChanged += txtNombreCarrera_TextChanged;
             // 
             // frmCarrera
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1200, 654);
+            ClientSize = new Size(1050, 490);
             Controls.Add(txtNombreCarrera);
             Controls.Add(dgvCarreras);
             Controls.Add(pmlAgrupaControles);
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
             DoubleBuffered = true;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmCarrera";
             Text = "Carrreras";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();

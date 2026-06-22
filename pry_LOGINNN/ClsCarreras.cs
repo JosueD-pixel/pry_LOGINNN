@@ -73,56 +73,30 @@ namespace pry_LOGINNN
             return tabla;
         }
 
-        public string GuardarActualizar(int TipoOperacion)
-        {
 
+        public string Eliminar()
+        {
             string msg = "";
             try
             {
                 cls_conexion conexionBD = new cls_conexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    switch (TipoOperacion)
+                    string sql = "DELETE FROM tblcarreras C WHERE C.idCarrera = @idCarrera;";
+                    using (comando = new MySqlCommand(sql, conexion))
                     {
-                        case 0://insertarNEW
-                            string sqlN = "INSERT INTO tblcarreras(nombreCarrera, descripcion) VALUES (@nombreCarrera,@descripcion);";
-                            using (comando = new MySqlCommand(sqlN, conexion))
-                            {
-                                comando.Parameters.AddWithValue("nombreCarrera", nombreCarrera);
-                                comando.Parameters.AddWithValue("descripcion", descripcion);
-
-                                int filasAfectadas = comando.ExecuteNonQuery();
-                                if (filasAfectadas > 0)
-                                {
-                                    msg = "El registro se guardo correctamente";
-                                }
-                                else
-                                {
-                                    msg = "Error, No se guardaron los datos";
-                                }
-                            }//Liberar la operacion de insercion
-                            break;
-                        case 1://ActualizarOLD
-                            string sqlA = "UPDATE tblcarreras C SET C.nombreCarrera = @nombreCarrera, C.descripcion = @descripcion WHERE C.idCarrera = @idCarrera;";
-                            using (comando = new MySqlCommand(sqlA, conexion))
-                            {
-                                comando.Parameters.AddWithValue("idCarrera", idCarrera);
-                                comando.Parameters.AddWithValue("nombreCarrera", nombreCarrera);
-                                comando.Parameters.AddWithValue("descripcion", descripcion);
-
-                                int filasAfectadas = comando.ExecuteNonQuery();
-                                if (filasAfectadas > 0)
-                                {
-                                    msg = "El registro se actualizo correctamente";
-                                }
-                                else
-                                {
-                                    msg = "Error, No se actualizaron los datos";
-                                }
-                            }//Liberar la operacion de actualizacion
-                            break;
-                    }
-                }//Libera la conexion
+                        comando.Parameters.AddWithValue("@idCarrera", idCarrera);
+                        int filasAfectadas = comando.ExecuteNonQuery();
+                        if (filasAfectadas > 0)
+                        {
+                            msg = "Datos eliminados correctamente";
+                        }
+                        else
+                        {
+                            msg = "Los datos no se pudieron eliminar";
+                        }
+                    }//liberar las conexiones
+                }
             }
             catch (Exception ex)
             {

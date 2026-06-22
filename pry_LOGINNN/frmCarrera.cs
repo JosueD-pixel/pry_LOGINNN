@@ -11,9 +11,11 @@ namespace pry_LOGINNN
     public partial class frmCarrera : Form
     {
         ClsCarreras carreras;
+        int idCarrera;
         public frmCarrera()
         {
             InitializeComponent();
+            
 
             carreras = new ClsCarreras();
             dgvCarreras.DataSource = null;
@@ -44,6 +46,16 @@ namespace pry_LOGINNN
             }
 
         }
+
+        private void dgvCarreras_SelectionChanged(object sender, EventArgs e)
+        {
+            //campo oculto que me servira de referencia y actualizar 
+            idCarrera = int.Parse(dgvCarreras.CurrentRow.Cells[0].Value.ToString());
+            //visuales
+            txtNombre.Text = dgvCarreras.CurrentRow.Cells[1].Value.ToString();
+            txtDescripcion.Text = dgvCarreras.CurrentRow.Cells[2].Value.ToString();
+        }
+
     }
 
 }
