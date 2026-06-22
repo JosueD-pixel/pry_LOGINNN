@@ -11,9 +11,11 @@ namespace pry_LOGINNN
     public partial class frmCarrera : Form
     {
         ClsCarreras carreras;
+        int idCarrera;
         public frmCarrera()
         {
             InitializeComponent();
+            
 
             carreras = new ClsCarreras();
             dgvCarreras.DataSource = null;
@@ -45,25 +47,15 @@ namespace pry_LOGINNN
 
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void dgvCarreras_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            {
-                carreras.IdCarrera = idCarrera;
-                var resp = MessageBox.Show("Confirmar que desea eliminar el dato seleccionado", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
-                if (resp == DialogResult.Yes)
-                {
-                    string msg = carreras.Eliminar();
-                    MessageBox.Show(msg);
-                    CargarGrid();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            //campo oculto que me servira de referencia y actualizar 
+            idCarrera = int.Parse(dgvCarreras.CurrentRow.Cells[0].Value.ToString());
+            //visuales
+            txtNombre.Text = dgvCarreras.CurrentRow.Cells[1].Value.ToString();
+            txtDescripcion.Text = dgvCarreras.CurrentRow.Cells[2].Value.ToString();
         }
+
     }
 
 }
