@@ -44,6 +44,26 @@ namespace pry_LOGINNN
             }
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                carreras.IdCarrera = idCarrera;
+                var resp = MessageBox.Show("Confirmar que desea eliminar el dato seleccionado", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (resp == DialogResult.Yes)
+                {
+                    string msg = carreras.Eliminar();
+                    MessageBox.Show(msg);
+                    CargarGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 
 }
