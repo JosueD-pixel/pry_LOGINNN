@@ -15,6 +15,7 @@ namespace pry_LOGINNN
         public frmTutores()
         {
             InitializeComponent();
+            CargarGrid();
         }
         public void CargarGrid()
         {

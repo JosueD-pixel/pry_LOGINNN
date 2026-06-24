@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTutor = new Label();
             pcbTutor = new PictureBox();
             panel1 = new Panel();
@@ -132,7 +133,7 @@
             txtNombreTutor.Location = new Point(554, 238);
             txtNombreTutor.Name = "txtNombreTutor";
             txtNombreTutor.PlaceholderText = "Buscar tutor";
-            txtNombreTutor.Size = new Size(208, 31);
+            txtNombreTutor.Size = new Size(208, 32);
             txtNombreTutor.TabIndex = 3;
             // 
             // txtCorreo
@@ -173,10 +174,21 @@
             // 
             // dgvTutores
             // 
+            dgvTutores.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvTutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTutores.EnableHeadersVisualStyles = false;
             dgvTutores.Location = new Point(160, 394);
             dgvTutores.Name = "dgvTutores";
             dgvTutores.RowHeadersWidth = 51;
+            dgvTutores.RowTemplate.Height = 32;
             dgvTutores.Size = new Size(897, 230);
             dgvTutores.TabIndex = 0;
             dgvTutores.SelectionChanged += dgvTutores_SelectionChanged;
