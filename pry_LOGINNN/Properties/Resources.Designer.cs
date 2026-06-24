@@ -73,6 +73,46 @@ namespace pry_LOGINNN.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnEliminar {
+            get {
+                object obj = ResourceManager.GetObject("btnEliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnGuardar {
+            get {
+                object obj = ResourceManager.GetObject("btnGuardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnNuevo {
+            get {
+                object obj = ResourceManager.GetObject("btnNuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnTutor {
+            get {
+                object obj = ResourceManager.GetObject("btnTutor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2026_06_17_174633 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2026-06-17 174633", resourceCulture);
@@ -143,6 +183,16 @@ namespace pry_LOGINNN.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Imagen1 {
+            get {
+                object obj = ResourceManager.GetObject("Imagen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MENu {
             get {
                 object obj = ResourceManager.GetObject("MENu", resourceCulture);
@@ -166,6 +216,16 @@ namespace pry_LOGINNN.Properties {
         internal static System.Drawing.Bitmap Sistema {
             get {
                 object obj = ResourceManager.GetObject("Sistema", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tutor {
+            get {
+                object obj = ResourceManager.GetObject("tutor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
