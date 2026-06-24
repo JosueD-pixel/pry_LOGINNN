@@ -31,16 +31,16 @@
             lblTutor = new Label();
             pcbTutor = new PictureBox();
             panel1 = new Panel();
-            dgvTutores = new DataGridView();
-            txtNombre = new TextBox();
-            txtParentesco = new TextBox();
-            txtDireccion = new TextBox();
+            txtTelefono = new TextBox();
+            btnEliminar = new Button();
+            btnGuardar = new Button();
+            btnNuevo = new Button();
             txtNombreTutor = new TextBox();
             txtCorreo = new TextBox();
-            btnNuevo = new Button();
-            btnGuardar = new Button();
-            btnEliminar = new Button();
-            txtTelefono = new TextBox();
+            txtDireccion = new TextBox();
+            txtParentesco = new TextBox();
+            txtNombre = new TextBox();
+            dgvTutores = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pcbTutor).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTutores).BeginInit();
@@ -82,70 +82,25 @@
             panel1.Size = new Size(778, 286);
             panel1.TabIndex = 2;
             // 
-            // dgvTutores
+            // txtTelefono
             // 
-            dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTutores.Location = new Point(160, 394);
-            dgvTutores.Name = "dgvTutores";
-            dgvTutores.RowHeadersWidth = 51;
-            dgvTutores.Size = new Size(897, 230);
-            dgvTutores.TabIndex = 0;
+            txtTelefono.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTelefono.Location = new Point(134, 115);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.PlaceholderText = "Escribir un telefono del tutor";
+            txtTelefono.Size = new Size(537, 31);
+            txtTelefono.TabIndex = 7;
             // 
-            // txtNombre
+            // btnEliminar
             // 
-            txtNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(134, 3);
-            txtNombre.Name = "txtNombre";
-            txtNombre.PlaceholderText = "Escribir el nombre del tutor";
-            txtNombre.Size = new Size(537, 31);
-            txtNombre.TabIndex = 0;
-            // 
-            // txtParentesco
-            // 
-            txtParentesco.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtParentesco.Location = new Point(134, 41);
-            txtParentesco.Name = "txtParentesco";
-            txtParentesco.PlaceholderText = "Escribir un parentesco del tutor";
-            txtParentesco.Size = new Size(537, 31);
-            txtParentesco.TabIndex = 1;
-            // 
-            // txtDireccion
-            // 
-            txtDireccion.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDireccion.Location = new Point(134, 78);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.PlaceholderText = "Escribir una direccion del tutor";
-            txtDireccion.Size = new Size(537, 31);
-            txtDireccion.TabIndex = 2;
-            // 
-            // txtNombreTutor
-            // 
-            txtNombreTutor.Font = new Font("Segoe UI Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreTutor.Location = new Point(554, 238);
-            txtNombreTutor.Name = "txtNombreTutor";
-            txtNombreTutor.PlaceholderText = "Buscar tutor";
-            txtNombreTutor.Size = new Size(208, 32);
-            txtNombreTutor.TabIndex = 3;
-            // 
-            // txtCorreo
-            // 
-            txtCorreo.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCorreo.Location = new Point(134, 152);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.PlaceholderText = "Escribir un correo del tutor";
-            txtCorreo.Size = new Size(537, 31);
-            txtCorreo.TabIndex = 4;
-            // 
-            // btnNuevo
-            // 
-            btnNuevo.BackgroundImage = Properties.Resources.btnNuevo;
-            btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.ForeColor = SystemColors.ControlLight;
-            btnNuevo.Location = new Point(72, 197);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(125, 86);
-            btnNuevo.TabIndex = 3;
-            btnNuevo.UseVisualStyleBackColor = true;
+            btnEliminar.BackgroundImage = Properties.Resources.btnEliminar;
+            btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEliminar.Location = new Point(364, 197);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(125, 86);
+            btnEliminar.TabIndex = 6;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
@@ -157,25 +112,74 @@
             btnGuardar.Size = new Size(125, 86);
             btnGuardar.TabIndex = 5;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
-            // btnEliminar
+            // btnNuevo
             // 
-            btnEliminar.BackgroundImage = Properties.Resources.btnEliminar;
-            btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(364, 197);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(125, 86);
-            btnEliminar.TabIndex = 6;
-            btnEliminar.UseVisualStyleBackColor = true;
+            btnNuevo.BackgroundImage = Properties.Resources.btnNuevo;
+            btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnNuevo.ForeColor = SystemColors.ControlLight;
+            btnNuevo.Location = new Point(72, 197);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(125, 86);
+            btnNuevo.TabIndex = 3;
+            btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
-            // txtTelefono
+            // txtNombreTutor
             // 
-            txtTelefono.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(134, 115);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.PlaceholderText = "Escribir un telefono del tutor";
-            txtTelefono.Size = new Size(537, 31);
-            txtTelefono.TabIndex = 7;
+            txtNombreTutor.Font = new Font("Segoe UI Black", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombreTutor.Location = new Point(554, 238);
+            txtNombreTutor.Name = "txtNombreTutor";
+            txtNombreTutor.PlaceholderText = "Buscar tutor";
+            txtNombreTutor.Size = new Size(208, 31);
+            txtNombreTutor.TabIndex = 3;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtCorreo.Location = new Point(134, 152);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.PlaceholderText = "Escribir un correo del tutor";
+            txtCorreo.Size = new Size(537, 31);
+            txtCorreo.TabIndex = 4;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtDireccion.Location = new Point(134, 78);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.PlaceholderText = "Escribir una direccion del tutor";
+            txtDireccion.Size = new Size(537, 31);
+            txtDireccion.TabIndex = 2;
+            // 
+            // txtParentesco
+            // 
+            txtParentesco.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtParentesco.Location = new Point(134, 41);
+            txtParentesco.Name = "txtParentesco";
+            txtParentesco.PlaceholderText = "Escribir un parentesco del tutor";
+            txtParentesco.Size = new Size(537, 31);
+            txtParentesco.TabIndex = 1;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombre.Location = new Point(134, 3);
+            txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "Escribir el nombre del tutor";
+            txtNombre.Size = new Size(537, 31);
+            txtNombre.TabIndex = 0;
+            // 
+            // dgvTutores
+            // 
+            dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTutores.Location = new Point(160, 394);
+            dgvTutores.Name = "dgvTutores";
+            dgvTutores.RowHeadersWidth = 51;
+            dgvTutores.Size = new Size(897, 230);
+            dgvTutores.TabIndex = 0;
+            dgvTutores.SelectionChanged += dgvTutores_SelectionChanged;
             // 
             // frmTutores
             // 
