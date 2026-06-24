@@ -35,6 +35,7 @@ namespace pry_LOGINNN
             pcbDocentes.Parent = pcbMenu;
             pcbCarreras.Parent = pcbMenu;
             pcbUsuarios.Parent = pcbMenu;
+            pcbTutores.Parent = pcbMenu;
 
             pcbAlumnos.BackColor = Color.Transparent;
             pcbDocentes.BackColor = Color.Transparent;
@@ -51,8 +52,14 @@ namespace pry_LOGINNN
 
         private void pcbCarreras_Click(object sender, EventArgs e)
         {
-           principal = new ClsPrincipal();
-           principal.AgregarAlcontenedor(new frmCarrera(),pnlContenedor);
-        }   
+            principal = new ClsPrincipal();
+            principal.AgregarAlcontenedor(new frmCarrera(), pnlContenedor);
+        }
+
+        private void pcbTutores_Click(object sender, EventArgs e)
+        {
+            principal = new ClsPrincipal();
+            principal.AgregarAlcontenedor(new frmTutores(), pnlContenedor);
+        }
     }
 }

@@ -125,13 +125,15 @@
             // 
             // pcbTutores
             // 
+            pcbTutores.BackColor = Color.Transparent;
             pcbTutores.Image = (Image)resources.GetObject("pcbTutores.Image");
-            pcbTutores.Location = new Point(112, 744);
+            pcbTutores.Location = new Point(88, 725);
             pcbTutores.Name = "pcbTutores";
             pcbTutores.Size = new Size(205, 97);
             pcbTutores.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbTutores.TabIndex = 7;
             pcbTutores.TabStop = false;
+            pcbTutores.Click += pcbTutores_Click;
             // 
             // frmPrincipal
             // 
