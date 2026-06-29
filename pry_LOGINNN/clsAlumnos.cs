@@ -50,6 +50,29 @@ namespace pry_LOGINNN
             }
             return tabla;
         }
+        //OBTENCION DE LOS DATOS CARRERAS POR: ANGEL JOSUE :3
+        public DataTable ObtenerCarreras()
+        {
+            tabla = new DataTable();
+            try
+            {
+                cls_conexion conexionBD = new cls_conexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    //valuemember es idcarrera, y el displaymember es nombrecarrera
+                    string sql = "SELECT idCarrera, nombreCarrera FROM tblCarreras;";
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    {
+                        consulta.Fill(tabla);
+                    }//Liberar la consulta
+                }//Liberarla conexion
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en la conexion al obtener el catalogo de carreras " + ex.Message);
+            }
+            return tabla;
+        }
 
     }
 }
