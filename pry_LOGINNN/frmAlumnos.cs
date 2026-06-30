@@ -33,6 +33,7 @@ namespace pry_LOGINNN
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
 
         public DataTable ObtenerTutores()
