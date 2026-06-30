@@ -36,29 +36,6 @@ namespace pry_LOGINNN
             }
 
         }
-
-        public DataTable ObtenerTutores()
-        {
-            tabla = new DataTable();
-            try
-            {
-                cls_conexion conexionBD = new cls_conexion();
-                using (var conexion = conexionBD.AbrirConexion())
-                {
-                    //valuemember es idtutor, y el displaymember es nombretutor
-                    string sql = "SELECT idTutor, nombreTutor FROM tbltutores;";
-                    using (consulta = new MySqlDataAdapter(sql, conexion))
-                    {
-                        consulta.Fill(tabla);
-                    }//Liberar la consulta
-                }//Liberarla conexión
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error en la conexion al obtener el catalogo de tutores" + ex.Message);
-            }
-            return tabla;
-        }
         public void CargarCombos()
         {
             alumnos = new clsAlumnos();
@@ -70,7 +47,7 @@ namespace pry_LOGINNN
                 //Creamos la fila del placeholder para la carrera
                 DataRow filaCarrera = dtCarreras.NewRow();
                 filaCarrera["idCarrera"] = 0;
-                filaCarrera["nombreCarrera"] = "-- Selecciona una Carrera";
+                filaCarrera["nombreCarrera"] = "-- Selecciona una Carrera --";
                 dtCarreras.Rows.InsertAt(filaCarrera, 0);
 
                 //Enlazamos los datos al ComboBox visual
@@ -80,13 +57,13 @@ namespace pry_LOGINNN
                 cmbCarreras.ValueMember = "idCarrera"; //La llave primaria real
                 cmbCarreras.SelectedIndex = 0; //Forzar a que muestre el placeholder
 
-                DataTable dtTutores = alumnos.ObtenerCarreras();
+                DataTable dtTutores = alumnos.ObtenerTutores();
 
                 //Creamos la fila del placeholder para la carrera
                 DataRow filaTutores = dtTutores.NewRow();
                 filaTutores["idTutor"] = 0;
-                filaTutores["nombreTutor"] = "-- Selecciona una Tutor";
-                dtTutores.Rows.InsertAt(filaCarrera, 0);
+                filaTutores["nombreTutor"] = "-- Selecciona una Tutor --";
+                dtTutores.Rows.InsertAt(filaTutores, 0);
 
                 //Enlazamos los datos al ComboBox visual
 
