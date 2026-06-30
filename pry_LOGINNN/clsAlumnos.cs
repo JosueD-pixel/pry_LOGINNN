@@ -49,18 +49,19 @@ namespace pry_LOGINNN
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     //Unimos las 4 tablas mediante INNER JOIN para mostrar descrípciones claras en el Grid
-                    string sql = "SELECT A.matricula AS Matricula, + " +
-                                 "A.nombreAlumno AS Nombre," +
-                                 "A.apellidoP AS 'A. Paterno', + " +
-                                 "A.apellidoM AS 'A. Materno'," +
-                                 "C.nombreCarrera AS Carrera," +
-                                 "T.nombreTutor AS Tutor," +
+                    string sql = "SELECT A.matricula AS Matrícula, " +
+                                 "A.nombreAlumno AS Nombre, " +
+                                 "A.apellidoP AS 'A. Paterno', " +
+                                 "A.apellidoM AS 'A. Materno', " +
+                                 "C.nombreCarrera AS Carrera, " +
+                                 "T.nombreTutor AS Tutor, " +
                                  "U.vchnombreUsuario AS Usuario, " +
-                                 "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.foto, A.idTutor, A.idCarrera, A.idUsuario" +
-                                 "FROM tblalumnos A" +
-                                 "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera" +
-                                 "INNER JOIN tbltutores T ON A.idTutor = T.idTutor" +
-                                 "INNER JOIN tblusuarios U ON A.idUsuario = U.intidUsuario; ";
+                                 "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.idTutor, A.idCarrera, A.idUsuario " +
+                                 "FROM tblalumnos A " +
+                                 "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
+                                 "INNER JOIN tbltutores T ON A.idTutor = T.idTutor " +
+                                 "INNER JOIN tblusuarios U ON A.idUsuario = U.intidUsuario;";
+
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);

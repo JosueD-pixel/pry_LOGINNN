@@ -57,6 +57,7 @@
             label2 = new Label();
             label3 = new Label();
             lblTitulo = new Label();
+            comboBox1 = new ComboBox();
             pcbLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             panel1.SuspendLayout();
@@ -67,7 +68,7 @@
             // pcbLogo
             // 
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(679, 13);
+            pcbLogo.Location = new Point(679, 30);
             pcbLogo.Margin = new Padding(3, 4, 3, 4);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(116, 88);
@@ -214,6 +215,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlDarkDark;
+            panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(txtPerfil);
             panel2.Controls.Add(txtUsuario);
             panel2.Controls.Add(txtPasword);
@@ -342,11 +344,21 @@
             lblTitulo.TabIndex = 25;
             lblTitulo.Text = "Alumnos";
             // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Administrador", "Alumno", "Docente", "Tutor" });
+            comboBox1.Location = new Point(19, 136);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(303, 36);
+            comboBox1.TabIndex = 11;
+            // 
             // frmAlumnos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.fondoalumno;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1200, 665);
             Controls.Add(pcbLogo);
@@ -401,5 +413,6 @@
         private Label label2;
         private Label label3;
         private Label lblTitulo;
+        private ComboBox comboBox1;
     }
 }
