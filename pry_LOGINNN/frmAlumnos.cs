@@ -20,6 +20,7 @@ namespace pry_LOGINNN
             CargarCombos();
         }
 
+
         public void CargarGrid()
         {
             alumnos = new clsAlumnos();
