@@ -50,7 +50,7 @@ namespace pry_LOGINNN
                     {
                         consulta.Fill(tabla);
                     }//Liberar la consulta
-                }//Liberarla conexion
+                }//Liberarla conexión
             }
             catch (Exception ex)
             {
