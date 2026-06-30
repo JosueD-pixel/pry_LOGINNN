@@ -40,6 +40,7 @@ namespace pry_LOGINNN
         {
             tabla = new DataTable();
             try
+
             {
                 cls_conexion conexionBD = new cls_conexion();
                 using (var conexion = conexionBD.AbrirConexion())
