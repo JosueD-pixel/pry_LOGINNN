@@ -136,6 +136,44 @@ namespace pry_LOGINNN
 
             }
         }
+        public DataTable Consultar()
+        {
+            tabla = new DataTable();
+            try
+            {
+                cls_conexion conexionBD = new cls_conexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT A.matricula AS Matricula, " +
+                                 "A.nombreAlumno AS Nombre, " +
+                                 "A.apellidoP AS 'A. Paterno', " +
+                                 "A.apellidoM AS 'A. Materno', " +
+                                 "C.nombreCarrera AS Carrera, " +
+                                 "T.nombreTutor AS Tutor, " +
+                                 "U.vchnombreUsuario AS Usuario, " +
+                                 "U.vchpassword, " + // <-- Aqui se agrega el password
+                                 "U.vchperfil, " + // <-- Aqui se agrega el perfil
+                                 "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.idTutor, A.idCarrera, A.idUsuario " +
+                                 "FROM tblalumnos A " +
+                                 "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
+                                 "INNER JOIN tbltutores T ON A.idTutor = T.idTutor " +
+                                 "INNER JOIN tblusuarios U ON A.idUsuario = U.intidUsuario WHERE matricula LIKE @matricula;";
+                    using (var consultar = new MySqlCommand(sql, conexion))
+                    {
+                        consultar.Parameters.AddWithValue("@matricula", "%" + matricula + "%");
+                        using (consulta = new MySqlDataAdapter(consultar))
+                        {
+                            consulta.Fill(tabla);
+                        }//Liberar el adaptador
+                    }//Liberar la consulta
+                }//Liberar la conexion
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en la conexion de la base de datos " + ex.Message);
+            }
+            return tabla;
+        }
 
     }
 }
