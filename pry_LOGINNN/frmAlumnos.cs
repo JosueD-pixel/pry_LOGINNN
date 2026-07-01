@@ -88,6 +88,14 @@ namespace pry_LOGINNN
             }
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            idMatricula = 0;
+            idUsuario = 0;
+            alumnos.LimpiarPanel(pnlAlumnos);
+            alumnos.LimpiarPanel(pnlUsuarios);
+            txtMatricula.Focus();
 
+        }
     }
 }

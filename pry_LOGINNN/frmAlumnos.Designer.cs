@@ -30,8 +30,8 @@
         {
             PictureBox pcbLogo;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtNombre = new TextBox();
             txtMatricula = new TextBox();
             txtAPaterno = new TextBox();
@@ -42,10 +42,10 @@
             txtCorreo = new TextBox();
             cmbTutores = new ComboBox();
             cmbCarreras = new ComboBox();
-            this.pnlAlumnos = new Panel();
+            pnlAlumnos = new Panel();
             txtUsuario = new TextBox();
             txtPasword = new TextBox();
-            this.pnlUsuarios = new Panel();
+            pnlUsuarios = new Panel();
             comboBox1 = new ComboBox();
             Alumno = new Label();
             label1 = new Label();
@@ -59,8 +59,8 @@
             lblTitulo = new Label();
             pcbLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
-            this.pnlAlumnos.SuspendLayout();
-            this.pnlUsuarios.SuspendLayout();
+            pnlAlumnos.SuspendLayout();
+            pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             SuspendLayout();
             // 
@@ -167,21 +167,21 @@
             // 
             // pnlAlumnos
             // 
-            this.pnlAlumnos.BackColor = SystemColors.ControlDarkDark;
-            this.pnlAlumnos.Controls.Add(txtMatricula);
-            this.pnlAlumnos.Controls.Add(cmbCarreras);
-            this.pnlAlumnos.Controls.Add(txtNombre);
-            this.pnlAlumnos.Controls.Add(cmbTutores);
-            this.pnlAlumnos.Controls.Add(txtAPaterno);
-            this.pnlAlumnos.Controls.Add(txtCorreo);
-            this.pnlAlumnos.Controls.Add(txtPromedioBarchiller);
-            this.pnlAlumnos.Controls.Add(txtTelefono);
-            this.pnlAlumnos.Controls.Add(txtAMaterno);
-            this.pnlAlumnos.Controls.Add(txtDireccion);
-            this.pnlAlumnos.Location = new Point(97, 125);
-            this.pnlAlumnos.Name = "pnlAlumnos";
-            this.pnlAlumnos.Size = new Size(703, 224);
-            this.pnlAlumnos.TabIndex = 11;
+            pnlAlumnos.BackColor = SystemColors.ControlDarkDark;
+            pnlAlumnos.Controls.Add(txtMatricula);
+            pnlAlumnos.Controls.Add(cmbCarreras);
+            pnlAlumnos.Controls.Add(txtNombre);
+            pnlAlumnos.Controls.Add(cmbTutores);
+            pnlAlumnos.Controls.Add(txtAPaterno);
+            pnlAlumnos.Controls.Add(txtCorreo);
+            pnlAlumnos.Controls.Add(txtPromedioBarchiller);
+            pnlAlumnos.Controls.Add(txtTelefono);
+            pnlAlumnos.Controls.Add(txtAMaterno);
+            pnlAlumnos.Controls.Add(txtDireccion);
+            pnlAlumnos.Location = new Point(97, 125);
+            pnlAlumnos.Name = "pnlAlumnos";
+            pnlAlumnos.Size = new Size(703, 224);
+            pnlAlumnos.TabIndex = 11;
             // 
             // txtUsuario
             // 
@@ -204,14 +204,14 @@
             // 
             // pnlUsuarios
             // 
-            this.pnlUsuarios.BackColor = SystemColors.ControlDarkDark;
-            this.pnlUsuarios.Controls.Add(comboBox1);
-            this.pnlUsuarios.Controls.Add(txtUsuario);
-            this.pnlUsuarios.Controls.Add(txtPasword);
-            this.pnlUsuarios.Location = new Point(806, 125);
-            this.pnlUsuarios.Name = "pnlUsuarios";
-            this.pnlUsuarios.Size = new Size(356, 224);
-            this.pnlUsuarios.TabIndex = 15;
+            pnlUsuarios.BackColor = SystemColors.ControlDarkDark;
+            pnlUsuarios.Controls.Add(comboBox1);
+            pnlUsuarios.Controls.Add(txtUsuario);
+            pnlUsuarios.Controls.Add(txtPasword);
+            pnlUsuarios.Location = new Point(806, 125);
+            pnlUsuarios.Name = "pnlUsuarios";
+            pnlUsuarios.Size = new Size(356, 224);
+            pnlUsuarios.TabIndex = 15;
             // 
             // comboBox1
             // 
@@ -275,6 +275,7 @@
             btnNuevo.Size = new Size(125, 86);
             btnNuevo.TabIndex = 18;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // txtMatriculaAlumno
             // 
@@ -289,23 +290,23 @@
             // dgvAlumnos
             // 
             dgvAlumnos.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.Bisque;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Bisque;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvAlumnos.EnableHeadersVisualStyles = false;
             dgvAlumnos.Location = new Point(98, 446);
             dgvAlumnos.Margin = new Padding(3, 4, 3, 4);
@@ -361,16 +362,16 @@
             Controls.Add(dgvAlumnos);
             Controls.Add(label1);
             Controls.Add(Alumno);
-            Controls.Add(this.pnlUsuarios);
-            Controls.Add(this.pnlAlumnos);
+            Controls.Add(pnlUsuarios);
+            Controls.Add(pnlAlumnos);
             DoubleBuffered = true;
             Name = "frmAlumnos";
             Text = "frmAlumnos";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
-            this.pnlAlumnos.ResumeLayout(false);
-            this.pnlAlumnos.PerformLayout();
-            this.pnlUsuarios.ResumeLayout(false);
-            this.pnlUsuarios.PerformLayout();
+            pnlAlumnos.ResumeLayout(false);
+            pnlAlumnos.PerformLayout();
+            pnlUsuarios.ResumeLayout(false);
+            pnlUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).EndInit();
             ResumeLayout(false);
             PerformLayout();
