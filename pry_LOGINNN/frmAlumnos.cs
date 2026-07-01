@@ -110,6 +110,7 @@ namespace pry_LOGINNN
                 txtPasword.Text = dgvAlumnos.CurrentRow.Cells["vchpassword"].Value.ToString();
                 cmbPerfil.Text = dgvAlumnos.CurrentRow.Cells["vchperfil"].Value.ToString();
 
+
                 cmbCarreras.SelectedValue = int.Parse(dgvAlumnos.CurrentRow.Cells["idCarrera"].Value.ToString());
                 cmbTutores.SelectedValue = int.Parse(dgvAlumnos.CurrentRow.Cells["idTutor"].Value.ToString());
             }
