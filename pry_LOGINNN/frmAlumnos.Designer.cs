@@ -30,8 +30,8 @@
         {
             PictureBox pcbLogo;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             txtNombre = new TextBox();
             txtMatricula = new TextBox();
             txtAPaterno = new TextBox();
@@ -42,26 +42,25 @@
             txtCorreo = new TextBox();
             cmbTutores = new ComboBox();
             cmbCarreras = new ComboBox();
-            panel1 = new Panel();
+            this.pnlAlumnos = new Panel();
             txtUsuario = new TextBox();
             txtPasword = new TextBox();
-            txtPerfil = new TextBox();
-            panel2 = new Panel();
+            this.pnlUsuarios = new Panel();
+            comboBox1 = new ComboBox();
             Alumno = new Label();
             label1 = new Label();
             btnEliminar = new Button();
             btnGuardar = new Button();
             btnNuevo = new Button();
-            txtNombreCarrera = new TextBox();
+            txtMatriculaAlumno = new TextBox();
             dgvAlumnos = new DataGridView();
             label2 = new Label();
             label3 = new Label();
             lblTitulo = new Label();
-            comboBox1 = new ComboBox();
             pcbLogo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            this.pnlAlumnos.SuspendLayout();
+            this.pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             SuspendLayout();
             // 
@@ -166,23 +165,23 @@
             cmbCarreras.Size = new Size(303, 36);
             cmbCarreras.TabIndex = 10;
             // 
-            // panel1
+            // pnlAlumnos
             // 
-            panel1.BackColor = SystemColors.ControlDarkDark;
-            panel1.Controls.Add(txtMatricula);
-            panel1.Controls.Add(cmbCarreras);
-            panel1.Controls.Add(txtNombre);
-            panel1.Controls.Add(cmbTutores);
-            panel1.Controls.Add(txtAPaterno);
-            panel1.Controls.Add(txtCorreo);
-            panel1.Controls.Add(txtPromedioBarchiller);
-            panel1.Controls.Add(txtTelefono);
-            panel1.Controls.Add(txtAMaterno);
-            panel1.Controls.Add(txtDireccion);
-            panel1.Location = new Point(97, 125);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(703, 224);
-            panel1.TabIndex = 11;
+            this.pnlAlumnos.BackColor = SystemColors.ControlDarkDark;
+            this.pnlAlumnos.Controls.Add(txtMatricula);
+            this.pnlAlumnos.Controls.Add(cmbCarreras);
+            this.pnlAlumnos.Controls.Add(txtNombre);
+            this.pnlAlumnos.Controls.Add(cmbTutores);
+            this.pnlAlumnos.Controls.Add(txtAPaterno);
+            this.pnlAlumnos.Controls.Add(txtCorreo);
+            this.pnlAlumnos.Controls.Add(txtPromedioBarchiller);
+            this.pnlAlumnos.Controls.Add(txtTelefono);
+            this.pnlAlumnos.Controls.Add(txtAMaterno);
+            this.pnlAlumnos.Controls.Add(txtDireccion);
+            this.pnlAlumnos.Location = new Point(97, 125);
+            this.pnlAlumnos.Name = "pnlAlumnos";
+            this.pnlAlumnos.Size = new Size(703, 224);
+            this.pnlAlumnos.TabIndex = 11;
             // 
             // txtUsuario
             // 
@@ -203,26 +202,26 @@
             txtPasword.Size = new Size(301, 34);
             txtPasword.TabIndex = 12;
             // 
-            // txtPerfil
+            // pnlUsuarios
             // 
-            txtPerfil.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtPerfil.Location = new Point(19, 96);
-            txtPerfil.Name = "txtPerfil";
-            txtPerfil.PlaceholderText = "Tipo de perfil";
-            txtPerfil.Size = new Size(301, 34);
-            txtPerfil.TabIndex = 14;
+            this.pnlUsuarios.BackColor = SystemColors.ControlDarkDark;
+            this.pnlUsuarios.Controls.Add(comboBox1);
+            this.pnlUsuarios.Controls.Add(txtUsuario);
+            this.pnlUsuarios.Controls.Add(txtPasword);
+            this.pnlUsuarios.Location = new Point(806, 125);
+            this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.Size = new Size(356, 224);
+            this.pnlUsuarios.TabIndex = 15;
             // 
-            // panel2
+            // comboBox1
             // 
-            panel2.BackColor = SystemColors.ControlDarkDark;
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(txtPerfil);
-            panel2.Controls.Add(txtUsuario);
-            panel2.Controls.Add(txtPasword);
-            panel2.Location = new Point(806, 125);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(356, 224);
-            panel2.TabIndex = 15;
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Administrador", "Alumno", "Docente", "Tutor" });
+            comboBox1.Location = new Point(19, 136);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(303, 36);
+            comboBox1.TabIndex = 11;
             // 
             // Alumno
             // 
@@ -277,36 +276,36 @@
             btnNuevo.TabIndex = 18;
             btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // txtNombreCarrera
+            // txtMatriculaAlumno
             // 
-            txtNombreCarrera.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreCarrera.Location = new Point(999, 404);
-            txtNombreCarrera.Margin = new Padding(3, 4, 3, 4);
-            txtNombreCarrera.Name = "txtNombreCarrera";
-            txtNombreCarrera.PlaceholderText = "Buscar Alumno";
-            txtNombreCarrera.Size = new Size(169, 38);
-            txtNombreCarrera.TabIndex = 22;
+            txtMatriculaAlumno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtMatriculaAlumno.Location = new Point(999, 404);
+            txtMatriculaAlumno.Margin = new Padding(3, 4, 3, 4);
+            txtMatriculaAlumno.Name = "txtMatriculaAlumno";
+            txtMatriculaAlumno.PlaceholderText = "Buscar Alumno";
+            txtMatriculaAlumno.Size = new Size(169, 38);
+            txtMatriculaAlumno.TabIndex = 22;
             // 
             // dgvAlumnos
             // 
             dgvAlumnos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.Bisque;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.Bisque;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle4;
             dgvAlumnos.EnableHeadersVisualStyles = false;
             dgvAlumnos.Location = new Point(98, 446);
             dgvAlumnos.Margin = new Padding(3, 4, 3, 4);
@@ -344,16 +343,6 @@
             lblTitulo.TabIndex = 25;
             lblTitulo.Text = "Alumnos";
             // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Administrador", "Alumno", "Docente", "Tutor" });
-            comboBox1.Location = new Point(19, 136);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(303, 36);
-            comboBox1.TabIndex = 11;
-            // 
             // frmAlumnos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -368,19 +357,20 @@
             Controls.Add(btnEliminar);
             Controls.Add(btnGuardar);
             Controls.Add(btnNuevo);
-            Controls.Add(txtNombreCarrera);
+            Controls.Add(txtMatriculaAlumno);
             Controls.Add(dgvAlumnos);
             Controls.Add(label1);
             Controls.Add(Alumno);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(this.pnlUsuarios);
+            Controls.Add(this.pnlAlumnos);
+            DoubleBuffered = true;
             Name = "frmAlumnos";
             Text = "frmAlumnos";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            this.pnlAlumnos.ResumeLayout(false);
+            this.pnlAlumnos.PerformLayout();
+            this.pnlUsuarios.ResumeLayout(false);
+            this.pnlUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -398,17 +388,17 @@
         private TextBox txtCorreo;
         private ComboBox cmbTutores;
         private ComboBox cmbCarreras;
-        private Panel panel1;
+        private Panel pnlAlumnos;
         private TextBox txtUsuario;
         private TextBox txtPasword;
         private TextBox txtPerfil;
-        private Panel panel2;
+        private Panel pnlUsuarios;
         private Label Alumno;
         private Label label1;
         private Button btnEliminar;
         private Button btnGuardar;
         private Button btnNuevo;
-        private TextBox txtNombreCarrera;
+        private TextBox txtMatriculaAlumno;
         private DataGridView dgvAlumnos;
         private Label label2;
         private Label label3;

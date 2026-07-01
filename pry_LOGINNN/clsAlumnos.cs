@@ -56,6 +56,8 @@ namespace pry_LOGINNN
                                  "C.nombreCarrera AS Carrera, " +
                                  "T.nombreTutor AS Tutor, " +
                                  "U.vchnombreUsuario AS Usuario, " +
+                                 "U.vchpassword, " + 
+                                 "U.vchperfil, " +
                                  "A.direccion, A.telefono, A.correo, A.promedioBachillerato, A.idTutor, A.idCarrera, A.idUsuario " +
                                  "FROM tblalumnos A " +
                                  "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
