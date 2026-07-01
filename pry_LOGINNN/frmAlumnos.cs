@@ -13,6 +13,9 @@ namespace pry_LOGINNN
     public partial class frmAlumnos : Form
     {
         clsAlumnos alumnos;
+        int idMatricula;
+        int idUsuario;
+
         public frmAlumnos()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace pry_LOGINNN
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             try
             {
+                dgvAlumnos.DataSource = alumnos.CargarDataGrid();
                 dgvAlumnos.Columns["Usuario"].Visible = false;
                 dgvAlumnos.Columns["vchpassword"].Visible = false;
                 dgvAlumnos.Columns["vchperfil"].Visible = false;
@@ -116,6 +120,40 @@ namespace pry_LOGINNN
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dgvAlumnos_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //esto es para saber si es nuevo o vamos a actualizar
+                idMatricula = int.Parse(dgvAlumnos.CurrentRow.Cells["Matricula"].Value.ToString());
+                idUsuario = int.Parse(dgvAlumnos.CurrentRow.Cells["idUsuario"].Value.ToString());
+
+                //Esto es para la tabla alumnos
+                txtMatricula.Text = idMatricula.ToString();
+                txtNombre.Text = dgvAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtAPaterno.Text = dgvAlumnos.CurrentRow.Cells["A. Paterno"].Value.ToString();
+                txtAMaterno.Text = dgvAlumnos.CurrentRow.Cells["A. Materno"].Value.ToString();
+                txtDireccion.Text = dgvAlumnos.CurrentRow.Cells["direccion"].Value.ToString();
+                txtTelefono.Text = dgvAlumnos.CurrentRow.Cells["telefono"].Value.ToString();
+                txtCorreo.Text = dgvAlumnos.CurrentRow.Cells["correo"].Value.ToString();
+                txtPromedioBarchiller.Text = dgvAlumnos.CurrentRow.Cells["promedioBachillerato"].Value.ToString();
+
+                //Eesto es para la tabla usuarios
+
+                txtUsuario.Text = dgvAlumnos.CurrentRow.Cells["Usuario"].Value.ToString();
+                txtPasword.Text = dgvAlumnos.CurrentRow.Cells["vchpassword"].Value.ToString();
+                cmbPerfil.Text = dgvAlumnos.CurrentRow.Cells["vchperfil"].Value.ToString();
+
+                cmbCarreras.SelectedValue = int.Parse(dgvAlumnos.CurrentRow.Cells["idCarrera"].Value.ToString());
+                cmbTutores.SelectedValue = int.Parse(dgvAlumnos.CurrentRow.Cells["idTutor"].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mapear los datos seleccionados " + ex.Message);
             }
 
         }
