@@ -28,7 +28,17 @@ namespace pry_LOGINNN
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             try
             {
-                dgvAlumnos.DataSource = alumnos.CargarDataGrid();
+                dgvAlumnos.Columns["Usuario"].Visible = false;
+                dgvAlumnos.Columns["vchpassword"].Visible = false;
+                dgvAlumnos.Columns["vchperfil"].Visible = false;
+                dgvAlumnos.Columns["direccion"].Visible = false;
+                dgvAlumnos.Columns["correo"].Visible = false;
+                dgvAlumnos.Columns["telefono"].Visible = false;
+                dgvAlumnos.Columns["promedioBachillerato"].Visible = false;
+                dgvAlumnos.Columns["idTutor"].Visible = false;
+                dgvAlumnos.Columns["idCarrera"].Visible = false;
+                dgvAlumnos.Columns["idUsuario"].Visible = false;
+
             }
             catch (Exception ex)
             {
