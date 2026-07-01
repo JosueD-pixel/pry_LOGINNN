@@ -49,7 +49,7 @@ namespace pry_LOGINNN
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     //Unimos las 4 tablas mediante INNER JOIN para mostrar descrípciones claras en el Grid
-                    string sql = "SELECT A.matricula AS Matrícula, " +
+                    string sql = "SELECT A.matricula AS Matricula, " +
                                  "A.nombreAlumno AS Nombre, " +
                                  "A.apellidoP AS 'A. Paterno', " +
                                  "A.apellidoM AS 'A. Materno', " +
