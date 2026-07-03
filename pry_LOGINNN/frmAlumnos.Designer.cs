@@ -67,10 +67,9 @@
             // pcbLogo
             // 
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(849, 37);
-            pcbLogo.Margin = new Padding(4, 5, 4, 5);
+            pcbLogo.Location = new Point(594, 22);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(146, 110);
+            pcbLogo.Size = new Size(102, 66);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 26;
             pcbLogo.TabStop = false;
@@ -78,101 +77,101 @@
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtNombre.Location = new Point(24, 70);
-            txtNombre.Margin = new Padding(4, 3, 4, 3);
+            txtNombre.Location = new Point(17, 42);
+            txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre";
-            txtNombre.Size = new Size(375, 39);
+            txtNombre.Size = new Size(264, 29);
             txtNombre.TabIndex = 0;
             // 
             // txtMatricula
             // 
             txtMatricula.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtMatricula.Location = new Point(24, 20);
-            txtMatricula.Margin = new Padding(4, 3, 4, 3);
+            txtMatricula.Location = new Point(17, 12);
+            txtMatricula.Margin = new Padding(3, 2, 3, 2);
             txtMatricula.Name = "txtMatricula";
             txtMatricula.PlaceholderText = "Matricula";
-            txtMatricula.Size = new Size(375, 39);
+            txtMatricula.Size = new Size(264, 29);
             txtMatricula.TabIndex = 2;
             // 
             // txtAPaterno
             // 
             txtAPaterno.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtAPaterno.Location = new Point(24, 120);
-            txtAPaterno.Margin = new Padding(4, 3, 4, 3);
+            txtAPaterno.Location = new Point(17, 72);
+            txtAPaterno.Margin = new Padding(3, 2, 3, 2);
             txtAPaterno.Name = "txtAPaterno";
             txtAPaterno.PlaceholderText = "Apellido Paterno";
-            txtAPaterno.Size = new Size(375, 39);
+            txtAPaterno.Size = new Size(264, 29);
             txtAPaterno.TabIndex = 3;
             // 
             // txtPromedioBarchiller
             // 
             txtPromedioBarchiller.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtPromedioBarchiller.Location = new Point(446, 120);
-            txtPromedioBarchiller.Margin = new Padding(4, 3, 4, 3);
+            txtPromedioBarchiller.Location = new Point(312, 72);
+            txtPromedioBarchiller.Margin = new Padding(3, 2, 3, 2);
             txtPromedioBarchiller.Name = "txtPromedioBarchiller";
             txtPromedioBarchiller.PlaceholderText = "Promedio ";
-            txtPromedioBarchiller.Size = new Size(375, 39);
+            txtPromedioBarchiller.Size = new Size(264, 29);
             txtPromedioBarchiller.TabIndex = 4;
             // 
             // txtAMaterno
             // 
             txtAMaterno.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtAMaterno.Location = new Point(24, 170);
-            txtAMaterno.Margin = new Padding(4, 3, 4, 3);
+            txtAMaterno.Location = new Point(17, 102);
+            txtAMaterno.Margin = new Padding(3, 2, 3, 2);
             txtAMaterno.Name = "txtAMaterno";
             txtAMaterno.PlaceholderText = "Apellido Materno";
-            txtAMaterno.Size = new Size(375, 39);
+            txtAMaterno.Size = new Size(264, 29);
             txtAMaterno.TabIndex = 5;
             // 
             // txtDireccion
             // 
             txtDireccion.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtDireccion.Location = new Point(24, 220);
-            txtDireccion.Margin = new Padding(4, 3, 4, 3);
+            txtDireccion.Location = new Point(17, 132);
+            txtDireccion.Margin = new Padding(3, 2, 3, 2);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.PlaceholderText = "Direccion ";
-            txtDireccion.Size = new Size(375, 39);
+            txtDireccion.Size = new Size(264, 29);
             txtDireccion.TabIndex = 6;
             // 
             // txtTelefono
             // 
             txtTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtTelefono.Location = new Point(446, 20);
-            txtTelefono.Margin = new Padding(4, 3, 4, 3);
+            txtTelefono.Location = new Point(312, 12);
+            txtTelefono.Margin = new Padding(3, 2, 3, 2);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Telefono";
-            txtTelefono.Size = new Size(375, 39);
+            txtTelefono.Size = new Size(264, 29);
             txtTelefono.TabIndex = 7;
             // 
             // txtCorreo
             // 
             txtCorreo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtCorreo.Location = new Point(446, 70);
-            txtCorreo.Margin = new Padding(4, 3, 4, 3);
+            txtCorreo.Location = new Point(312, 42);
+            txtCorreo.Margin = new Padding(3, 2, 3, 2);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.PlaceholderText = "Correo";
-            txtCorreo.Size = new Size(375, 39);
+            txtCorreo.Size = new Size(264, 29);
             txtCorreo.TabIndex = 8;
             // 
             // cmbTutores
             // 
             cmbTutores.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             cmbTutores.FormattingEnabled = true;
-            cmbTutores.Location = new Point(446, 167);
-            cmbTutores.Margin = new Padding(4, 3, 4, 3);
+            cmbTutores.Location = new Point(312, 100);
+            cmbTutores.Margin = new Padding(3, 2, 3, 2);
             cmbTutores.Name = "cmbTutores";
-            cmbTutores.Size = new Size(378, 40);
+            cmbTutores.Size = new Size(266, 29);
             cmbTutores.TabIndex = 9;
             // 
             // cmbCarreras
             // 
             cmbCarreras.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             cmbCarreras.FormattingEnabled = true;
-            cmbCarreras.Location = new Point(446, 217);
-            cmbCarreras.Margin = new Padding(4, 3, 4, 3);
+            cmbCarreras.Location = new Point(312, 130);
+            cmbCarreras.Margin = new Padding(3, 2, 3, 2);
             cmbCarreras.Name = "cmbCarreras";
-            cmbCarreras.Size = new Size(378, 40);
+            cmbCarreras.Size = new Size(266, 29);
             cmbCarreras.TabIndex = 10;
             // 
             // pnlAlumnos
@@ -188,31 +187,31 @@
             pnlAlumnos.Controls.Add(txtTelefono);
             pnlAlumnos.Controls.Add(txtAMaterno);
             pnlAlumnos.Controls.Add(txtDireccion);
-            pnlAlumnos.Location = new Point(121, 157);
-            pnlAlumnos.Margin = new Padding(4, 3, 4, 3);
+            pnlAlumnos.Location = new Point(85, 94);
+            pnlAlumnos.Margin = new Padding(3, 2, 3, 2);
             pnlAlumnos.Name = "pnlAlumnos";
-            pnlAlumnos.Size = new Size(879, 280);
+            pnlAlumnos.Size = new Size(615, 168);
             pnlAlumnos.TabIndex = 11;
             // 
             // txtUsuario
             // 
             txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtUsuario.Location = new Point(24, 20);
-            txtUsuario.Margin = new Padding(4, 3, 4, 3);
+            txtUsuario.Location = new Point(17, 12);
+            txtUsuario.Margin = new Padding(3, 2, 3, 2);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = " Nombre";
-            txtUsuario.Size = new Size(375, 39);
+            txtUsuario.Size = new Size(264, 29);
             txtUsuario.TabIndex = 13;
             // 
             // txtPasword
             // 
             txtPasword.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtPasword.Location = new Point(24, 70);
-            txtPasword.Margin = new Padding(4, 3, 4, 3);
+            txtPasword.Location = new Point(17, 42);
+            txtPasword.Margin = new Padding(3, 2, 3, 2);
             txtPasword.Name = "txtPasword";
             txtPasword.PasswordChar = '*';
             txtPasword.PlaceholderText = "Contraseña";
-            txtPasword.Size = new Size(375, 39);
+            txtPasword.Size = new Size(264, 29);
             txtPasword.TabIndex = 12;
             // 
             // pnlUsuarios
@@ -221,10 +220,10 @@
             pnlUsuarios.Controls.Add(cmbPerfil);
             pnlUsuarios.Controls.Add(txtUsuario);
             pnlUsuarios.Controls.Add(txtPasword);
-            pnlUsuarios.Location = new Point(1007, 157);
-            pnlUsuarios.Margin = new Padding(4, 3, 4, 3);
+            pnlUsuarios.Location = new Point(705, 94);
+            pnlUsuarios.Margin = new Padding(3, 2, 3, 2);
             pnlUsuarios.Name = "pnlUsuarios";
-            pnlUsuarios.Size = new Size(446, 280);
+            pnlUsuarios.Size = new Size(312, 168);
             pnlUsuarios.TabIndex = 15;
             // 
             // cmbPerfil
@@ -232,20 +231,19 @@
             cmbPerfil.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             cmbPerfil.FormattingEnabled = true;
             cmbPerfil.Items.AddRange(new object[] { "Administrador", "Alumno", "Docente", "Tutor" });
-            cmbPerfil.Location = new Point(24, 170);
-            cmbPerfil.Margin = new Padding(4, 3, 4, 3);
+            cmbPerfil.Location = new Point(17, 102);
+            cmbPerfil.Margin = new Padding(3, 2, 3, 2);
             cmbPerfil.Name = "cmbPerfil";
-            cmbPerfil.Size = new Size(378, 40);
+            cmbPerfil.Size = new Size(266, 29);
             cmbPerfil.TabIndex = 11;
             // 
             // Alumno
             // 
             Alumno.AutoSize = true;
             Alumno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Alumno.Location = new Point(126, 113);
-            Alumno.Margin = new Padding(4, 0, 4, 0);
+            Alumno.Location = new Point(88, 68);
             Alumno.Name = "Alumno";
-            Alumno.Size = new Size(122, 38);
+            Alumno.Size = new Size(83, 25);
             Alumno.TabIndex = 16;
             Alumno.Text = "Alumno";
             // 
@@ -253,10 +251,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(1007, 113);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(705, 68);
             label1.Name = "label1";
-            label1.Size = new Size(129, 38);
+            label1.Size = new Size(89, 25);
             label1.TabIndex = 17;
             label1.Text = "Usuarios";
             // 
@@ -264,21 +261,20 @@
             // 
             btnEliminar.BackgroundImage = Properties.Resources.Captura_de_pantalla_2026_06_17_183955;
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(804, 445);
-            btnEliminar.Margin = new Padding(4, 5, 4, 5);
+            btnEliminar.Location = new Point(563, 267);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(169, 107);
+            btnEliminar.Size = new Size(118, 64);
             btnEliminar.TabIndex = 21;
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
             btnGuardar.BackgroundImage = Properties.Resources.Captura_de_pantalla_2026_06_17_184226;
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(620, 445);
-            btnGuardar.Margin = new Padding(4, 5, 4, 5);
+            btnGuardar.Location = new Point(434, 267);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(176, 107);
+            btnGuardar.Size = new Size(123, 64);
             btnGuardar.TabIndex = 19;
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -287,10 +283,9 @@
             // 
             btnNuevo.BackgroundImage = Properties.Resources.Captura_de_pantalla_2026_06_17_1831001;
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Location = new Point(456, 445);
-            btnNuevo.Margin = new Padding(4, 5, 4, 5);
+            btnNuevo.Location = new Point(319, 267);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(156, 107);
+            btnNuevo.Size = new Size(109, 64);
             btnNuevo.TabIndex = 18;
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += btnNuevo_Click;
@@ -298,11 +293,10 @@
             // txtMatriculaAlumno
             // 
             txtMatriculaAlumno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtMatriculaAlumno.Location = new Point(1249, 505);
-            txtMatriculaAlumno.Margin = new Padding(4, 5, 4, 5);
+            txtMatriculaAlumno.Location = new Point(874, 303);
             txtMatriculaAlumno.Name = "txtMatriculaAlumno";
             txtMatriculaAlumno.PlaceholderText = "Buscar Alumno";
-            txtMatriculaAlumno.Size = new Size(210, 44);
+            txtMatriculaAlumno.Size = new Size(148, 32);
             txtMatriculaAlumno.TabIndex = 22;
             txtMatriculaAlumno.TextChanged += txtMatriculaAlumno_TextChanged;
             // 
@@ -327,12 +321,11 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvAlumnos.EnableHeadersVisualStyles = false;
-            dgvAlumnos.Location = new Point(123, 557);
-            dgvAlumnos.Margin = new Padding(4, 5, 4, 5);
+            dgvAlumnos.Location = new Point(86, 334);
             dgvAlumnos.Name = "dgvAlumnos";
             dgvAlumnos.RowHeadersWidth = 51;
             dgvAlumnos.RowTemplate.Height = 35;
-            dgvAlumnos.Size = new Size(1337, 217);
+            dgvAlumnos.Size = new Size(936, 130);
             dgvAlumnos.TabIndex = 20;
             dgvAlumnos.SelectionChanged += dgvAlumnos_SelectionChanged;
             // 
@@ -340,40 +333,37 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(614, -5);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(430, -3);
             label2.Name = "label2";
-            label2.Size = new Size(0, 54);
+            label2.Size = new Size(0, 37);
             label2.TabIndex = 23;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(734, 397);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(514, 238);
             label3.Name = "label3";
-            label3.Size = new Size(0, 38);
+            label3.Size = new Size(0, 25);
             label3.TabIndex = 24;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(580, 38);
-            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Location = new Point(406, 23);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(247, 70);
+            lblTitulo.Size = new Size(165, 47);
             lblTitulo.TabIndex = 25;
             lblTitulo.Text = "Alumnos";
             // 
             // frmAlumnos
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1500, 832);
+            ClientSize = new Size(959, 449);
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
             Controls.Add(label3);
@@ -388,7 +378,7 @@
             Controls.Add(pnlUsuarios);
             Controls.Add(pnlAlumnos);
             DoubleBuffered = true;
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmAlumnos";
             Text = "frmAlumnos";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
