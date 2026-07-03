@@ -292,5 +292,53 @@ namespace pry_LOGINNN
             return msg;
         }
 
+        public string Eliminar()
+        {
+            string msg = "";
+            cls_conexion conexionBD = new cls_conexion();
+
+            try
+            {
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    using (var transaccion = conexion.BeginTransaction())
+                    {
+                        try
+                        {
+                            string sqlDelAlumno = " DELETE FROM tblalumnos WHERE matricula = @matricula;";
+                            using (comando = new MySqlCommand(sqlDelAlumno, conexion, transaccion))
+                            {
+                                comando.Parameters.AddWithValue("@matricula", matricula);
+                                comando.ExecuteNonQuery();
+                            }
+
+                            string sqlDelUsuario = " DELETE FROM tblusuarios WHERE intidUsuario = @idUsuario;";
+                            using (comando = new MySqlCommand(sqlDelUsuario, conexion, transaccion))
+                            {
+                                comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+                                comando.ExecuteNonQuery();
+                            }
+
+                            transaccion.Commit();
+                            msg = "El alumno y sus credenciales de usuario han sido eliminados del sistema.";
+                        }
+                        catch (Exception ex)
+                        {
+                            //Si algo falla, deshacemos la operacion para no dejar datos huerfanos
+                            transaccion.Rollback();
+                            throw new Exception("No se pudo completar la eliminacion. Cambios revertidos: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de conexion al eliminar: " + ex.Message);
+            }
+
+            return msg;
+        }
+
+
     }
 }
