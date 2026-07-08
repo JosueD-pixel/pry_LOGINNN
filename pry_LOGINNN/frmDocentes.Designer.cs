@@ -105,7 +105,7 @@
             pnlDocentes.Controls.Add(txtTelefono);
             pnlDocentes.Controls.Add(txtClave);
             pnlDocentes.Location = new Point(89, 161);
-            pnlDocentes.Margin = new Padding(4, 4, 4, 4);
+            pnlDocentes.Margin = new Padding(4);
             pnlDocentes.Name = "pnlDocentes";
             pnlDocentes.Size = new Size(879, 265);
             pnlDocentes.TabIndex = 22;
@@ -114,7 +114,7 @@
             // 
             txtNombre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(32, 74);
-            txtNombre.Margin = new Padding(4, 4, 4, 4);
+            txtNombre.Margin = new Padding(4);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre";
             txtNombre.Size = new Size(383, 39);
@@ -126,7 +126,7 @@
             cmbPuesto.FormattingEnabled = true;
             cmbPuesto.Items.AddRange(new object[] { "Profesor", "Coordinador" });
             cmbPuesto.Location = new Point(32, 141);
-            cmbPuesto.Margin = new Padding(4, 4, 4, 4);
+            cmbPuesto.Margin = new Padding(4);
             cmbPuesto.Name = "cmbPuesto";
             cmbPuesto.Size = new Size(383, 40);
             cmbPuesto.TabIndex = 26;
@@ -135,7 +135,7 @@
             // 
             txtCorreo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtCorreo.Location = new Point(424, 74);
-            txtCorreo.Margin = new Padding(4, 4, 4, 4);
+            txtCorreo.Margin = new Padding(4);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.PlaceholderText = "Correo";
             txtCorreo.Size = new Size(383, 39);
@@ -145,7 +145,7 @@
             // 
             txtTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTelefono.Location = new Point(424, 24);
-            txtTelefono.Margin = new Padding(4, 4, 4, 4);
+            txtTelefono.Margin = new Padding(4);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Telefono";
             txtTelefono.Size = new Size(383, 39);
@@ -155,7 +155,7 @@
             // 
             txtClave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtClave.Location = new Point(32, 24);
-            txtClave.Margin = new Padding(4, 4, 4, 4);
+            txtClave.Margin = new Padding(4);
             txtClave.Name = "txtClave";
             txtClave.PlaceholderText = "Clave";
             txtClave.Size = new Size(383, 39);
@@ -168,7 +168,7 @@
             pnlUsuarios.Controls.Add(txtPassword);
             pnlUsuarios.Controls.Add(txtUsuario);
             pnlUsuarios.Location = new Point(980, 161);
-            pnlUsuarios.Margin = new Padding(4, 4, 4, 4);
+            pnlUsuarios.Margin = new Padding(4);
             pnlUsuarios.Name = "pnlUsuarios";
             pnlUsuarios.Size = new Size(446, 265);
             pnlUsuarios.TabIndex = 23;
@@ -179,7 +179,7 @@
             cmbPerfil.FormattingEnabled = true;
             cmbPerfil.Items.AddRange(new object[] { "Administrador", "Alumno", "Docente", "Tutor" });
             cmbPerfil.Location = new Point(19, 141);
-            cmbPerfil.Margin = new Padding(4, 4, 4, 4);
+            cmbPerfil.Margin = new Padding(4);
             cmbPerfil.Name = "cmbPerfil";
             cmbPerfil.Size = new Size(383, 40);
             cmbPerfil.TabIndex = 24;
@@ -188,7 +188,7 @@
             // 
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(19, 74);
-            txtPassword.Margin = new Padding(4, 4, 4, 4);
+            txtPassword.Margin = new Padding(4);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Contraseña";
             txtPassword.Size = new Size(383, 39);
@@ -198,7 +198,7 @@
             // 
             txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(19, 24);
-            txtUsuario.Margin = new Padding(4, 4, 4, 4);
+            txtUsuario.Margin = new Padding(4);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Nombre";
             txtUsuario.Size = new Size(383, 39);
@@ -208,7 +208,7 @@
             // 
             txtClaveDocente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtClaveDocente.Location = new Point(1042, 486);
-            txtClaveDocente.Margin = new Padding(4, 4, 4, 4);
+            txtClaveDocente.Margin = new Padding(4);
             txtClaveDocente.Name = "txtClaveDocente";
             txtClaveDocente.PlaceholderText = "Buscar Docente";
             txtClaveDocente.Size = new Size(383, 39);
@@ -236,6 +236,7 @@
             btnNuevo.Size = new Size(156, 106);
             btnNuevo.TabIndex = 26;
             btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
@@ -279,10 +280,9 @@
             Controls.Add(pnlDocentes);
             Controls.Add(dgvDocentes);
             DoubleBuffered = true;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "frmDocentes";
             Text = "frmDocentes";
-            
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDocentes).EndInit();
             pnlDocentes.ResumeLayout(false);
