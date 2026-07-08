@@ -78,6 +78,7 @@
             pcbDocentes.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbDocentes.TabIndex = 2;
             pcbDocentes.TabStop = false;
+            pcbDocentes.Click += pcbDocentes_Click;
             pcbDocentes.MouseDown += pcbGenerar_MouseDown;
             pcbDocentes.MouseUp += pcbGenerar_MouseUp;
             // 

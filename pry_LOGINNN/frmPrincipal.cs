@@ -67,5 +67,11 @@ namespace pry_LOGINNN
             principal = new ClsPrincipal();
             principal.AgregarAlcontenedor(new frmAlumnos(), pnlContenedor);
         }
+
+        private void pcbDocentes_Click(object sender, EventArgs e)
+        {
+            principal = new ClsPrincipal();
+            principal.AgregarAlcontenedor(new frmDocentes(), pnlContenedor);
+        }
     }
 }
