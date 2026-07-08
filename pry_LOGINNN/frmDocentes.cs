@@ -130,15 +130,15 @@ namespace pry_LOGINNN
                 docentes = new clsDocentes();
                 // 1. Llenamos las propiedades del bloque Alumno
                 docentes.Clave = int.Parse(txtClave.Text);
-                docentes.NombreDocente = txtNombre.Text;
+                docentes.NombreDocente = string.IsNullOrEmpty(txtNombre.Text) ? null : txtNombre.Text;
                 docentes.Puesto = cmbPuesto.Text;
-                docentes.Telefono = txtTelefono.Text;
-                docentes.Correo = txtCorreo.Text;
+                docentes.Telefono = string.IsNullOrEmpty(txtTelefono.Text) ? null : txtTelefono.Text;
+                docentes.Correo = string.IsNullOrEmpty(txtCorreo.Text) ? null : txtTelefono.Text;
 
                 // 2. Llenamos las propiedades del bloque Usuario
                 docentes.IdUsuario = idUsuario; //Sera 0 si es nuevo, o el ID real si es update
-                docentes.NombreUsuario = txtUsuario.Text;
-                docentes.Password = txtPassword.Text;
+                docentes.NombreUsuario = string.IsNullOrEmpty(txtUsuario.Text) ? null : txtUsuario.Text;
+                docentes.Password = string.IsNullOrEmpty(txtPassword.Text) ? null : txtPassword.Text;
                 docentes.Perfil = cmbPerfil.Text;
 
                 string msg = "";
