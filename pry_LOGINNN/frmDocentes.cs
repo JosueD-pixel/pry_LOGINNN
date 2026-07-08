@@ -92,5 +92,15 @@ namespace pry_LOGINNN
             }
 
         }
+
+        private void frmDocentes_Click(object sender, EventArgs e)
+        {
+            idclave = 0;
+            idUsuario = 0;
+            docentes.LimpiarPanel(pnlDocentes);
+            docentes.LimpiarPanel(pnlUsuarios);
+            txtClave.Focus();
+
+        }
     }
 }
