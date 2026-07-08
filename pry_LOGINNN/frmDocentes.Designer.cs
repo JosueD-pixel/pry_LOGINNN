@@ -282,7 +282,7 @@
             Margin = new Padding(4, 4, 4, 4);
             Name = "frmDocentes";
             Text = "frmDocentes";
-            Click += frmDocentes_Click;
+            
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDocentes).EndInit();
             pnlDocentes.ResumeLayout(false);
