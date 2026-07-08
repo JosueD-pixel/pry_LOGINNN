@@ -21,6 +21,19 @@ namespace pry_LOGINNN
         public string Correo { get => correo; set => correo = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
 
+
+
+        private string nombreUsuario;
+        private string password;
+        private string perfil;
+
+        public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
+        public string Password { get => password; set => password = value; }
+        public string Perfil { get => perfil; set => perfil = value; }
+        public string Puesto { get => puesto; set => puesto = value; }
+
+
+
         private DataTable tabla;
         private MySqlDataAdapter consulta;
         private MySqlCommand comando;
@@ -155,6 +168,103 @@ namespace pry_LOGINNN
 
             }
         }
+
+        public string GuardarActualizar(int tipoOperacion)
+        {
+            string msg = "";
+            cls_conexion conexionBD = new cls_conexion();
+            try
+            {
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    using (var transaccion = conexion.BeginTransaction())
+                    {
+                        try
+                        {
+                            switch (tipoOperacion)
+                            {
+                                case 0://Nuevo e insertar
+                                    string sqlInsUser = "INSERT INTO tblusuarios(vchnombreUsuario, vchpassword , vchperfil, vhcestado) " +
+                                                        "VALUES(@nomUser, MD5(@pass), @perfil, 'Activo'); SELECT LAST_INSERT_ID();";
+
+                                    int nuevoIdUsuario = 0;
+                                    using (comando = new MySqlCommand(sqlInsUser, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
+                                        comando.Parameters.AddWithValue("@pass", password);
+                                        comando.Parameters.AddWithValue("@perfil", perfil);
+                                        nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar());
+                                    }
+
+                                    //Paso B: Insertar el docente en tbldocentes vinculando el ID de usuario obtenido
+                                    string sqlInsDocente = "INSERT INTO tbldocentes(claveDocente, idUsuario, nombreDocente, puesto, telefono, correo)" +
+                                                          "VALUES(@claveDocente, @idUsuario, @nombre, @puesto, @tel, @correo);";
+
+                                    using (comando = new MySqlCommand(sqlInsDocente, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@claveDocente", clave);
+                                        comando.Parameters.AddWithValue("@idUsuario", nuevoIdUsuario);
+                                        comando.Parameters.AddWithValue("@nombre", nombreDocente);
+                                        comando.Parameters.AddWithValue("@puesto", puesto);
+                                        comando.Parameters.AddWithValue("@tel", telefono);
+                                        comando.Parameters.AddWithValue("@correo", correo);
+
+                                        comando.ExecuteNonQuery();
+                                    }
+                                    msg = "El docente y sus credenciales se guardaron correctamente ";
+                                    break;
+
+                                case 1://Actualizar 
+                                       //Paso A: Actualizar la tabla usuarios utilizando el ID que recuperamos en el clic del grind
+                                    string sqlUpdUser = "UPDATE tblusuarios SET vchnombreusuario = @nomUser, vchperfil = @perfil " +
+                                                        "WHERE intidUsuario = @idUsuario;";
+
+                                    using (comando = new MySqlCommand(sqlUpdUser, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@idUsuario", clave);
+                                        comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
+                                        comando.Parameters.AddWithValue("@perfil", perfil);
+
+                                        comando.ExecuteNonQuery();
+                                    }
+                                    //PASO B: Actualizar los datos del expediente en tbldocentes mediante su matricula
+                                    string sqlUpdDocente = "UPDATE tbldocentes SET nombreDocente = @nombre, " +
+                                                           "puesto = @puesto, telefono = @tel, correo = @correo " +
+                                                           "WHERE claveDocente = @claveDocente;";
+
+                                    using (comando = new MySqlCommand(sqlUpdDocente, conexion, transaccion))
+                                    {
+                                        comando.Parameters.AddWithValue("@claveDocente", clave);
+                                        comando.Parameters.AddWithValue("@nombre", nombreDocente);
+                                        comando.Parameters.AddWithValue("@puesto", puesto);
+                                        comando.Parameters.AddWithValue("@tel", telefono);
+                                        comando.Parameters.AddWithValue("@correo", correo);
+
+                                        comando.ExecuteNonQuery();
+                                    }
+
+                                    msg = "Los datos del docente se actualizaron correctamente.";
+                                    break;
+                            }
+                            //Si todo se ejecuto sin errores en el switch, confirmamos cambios en la BD
+                            transaccion.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            //Si algo fallo (en el usuario o el alumno), deshacemos todo para evitar inconsistencias
+                            transaccion.Rollback();
+                            throw new Exception("Error en la operacion. Se cancelaron los cambios: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de conexion: " + ex.Message);
+            }
+            return msg;
+        }
+
 
     }
 }

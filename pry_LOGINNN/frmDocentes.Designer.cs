@@ -94,6 +94,7 @@
             dgvDocentes.RowTemplate.Height = 35;
             dgvDocentes.Size = new Size(1338, 216);
             dgvDocentes.TabIndex = 21;
+            dgvDocentes.SelectionChanged += dgvDocentes_SelectionChanged;
             // 
             // pnlDocentes
             // 
@@ -246,6 +247,7 @@
             btnGuardar.Size = new Size(176, 106);
             btnGuardar.TabIndex = 34;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnEliminar
             // 
