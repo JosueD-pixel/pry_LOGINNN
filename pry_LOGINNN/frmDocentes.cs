@@ -10,9 +10,36 @@ namespace pry_LOGINNN
 {
     public partial class frmDocentes : Form
     {
+        clsDocentes docentes;
+
         public frmDocentes()
         {
-            InitializeComponent();
+            clsDocentes docentes;
+            CargarGrid();
+
         }
+
+        public void CargarGrid()
+        {
+            docentes = new clsDocentes();
+            dgvDocentes.DataSource = null;
+            dgvDocentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                dgvDocentes.DataSource = docentes.CargarDataGrid();
+                dgvDocentes.Columns["Usuario"].Visible = false;
+                dgvDocentes.Columns["vchpassword"].Visible = false;
+                dgvDocentes.Columns["vchperfil"].Visible = false;
+                dgvDocentes.Columns["correo"].Visible = true;
+                dgvDocentes.Columns["telefono"].Visible = true;
+                dgvDocentes.Columns["idUsuario"].Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }
