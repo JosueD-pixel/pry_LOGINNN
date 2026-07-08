@@ -153,6 +153,21 @@ namespace pry_LOGINNN
 
             return msg;
         }
+        public void LimpiarPanel(Panel panelDestino)
+        {
+            foreach (Control control in panelDestino.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = 0;
+                }
+
+            }
+        }
 
         public string GuardarActualizar(int tipoOperacion)
         {
