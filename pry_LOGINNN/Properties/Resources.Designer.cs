@@ -73,6 +73,16 @@ namespace pry_LOGINNN.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bordes {
+            get {
+                object obj = ResourceManager.GetObject("bordes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnEliminar {
             get {
                 object obj = ResourceManager.GetObject("btnEliminar", resourceCulture);

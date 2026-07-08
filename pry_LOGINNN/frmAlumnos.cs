@@ -162,24 +162,7 @@ namespace pry_LOGINNN
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtUsuario.Text))
-                {
-                    MessageBox.Show("El campo usuario es obligatorio.", "Validación",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    txtUsuario.Focus();
-                    return;
-                }
-
-                // Validar contraseña
-                if (string.IsNullOrWhiteSpace(txtPasword.Text))
-                {
-                    MessageBox.Show("El campo contraseña es obligatorio.", "Validación",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    txtPasword.Focus();
-                    return;
-                }
                 //Determinamos el tipo de operacion 
                 int tipoOperacion = idMatricula == 0 ? 0 : 1;
 
